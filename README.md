@@ -1,2 +1,3 @@
 # Qbus-Framework-Guide
-Detailed tutorial and description of Qbus Framework.
+
+Detailed comprehensive tutorial and explaination of Qbus Framework.
