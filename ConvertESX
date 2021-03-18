@@ -1,0 +1,117 @@
+ESX = nil
+
+Citizen.CreateThread(function()
+  while ESX == nil do
+    TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+    Citizen.Wait(amount)
+  end
+end)
+
+QBCore = nil 
+
+Citizen.CreateThread(function()
+    while QBCore == nil do
+        TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
+        Citizen.Wait(amount)
+    end
+end)
+
+-----------------------------------------------
+
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded')
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
+AddEventHandler('QBCore:Client:OnPlayerLoaded')
+
+-----------------------------------------------
+
+RegisterNetEvent('esx:setJob')
+AddEventHandler('esx:setJob')
+
+RegisterNetEvent('QBCore:Client:OnJobUpdate')
+AddEventHandler('QBCore:Client:OnJobUpdate')
+
+-----------------------------------------------
+
+DrawText3D(1, 1, 1, 'something')
+
+QBCore.Functions.DrawText3D(1, 1, 1, 'something')
+
+-----------------------------------------------
+
+xPlayer.getInventoryItem
+
+xPlayer.Functions.GetItemByName
+
+-----------------------------------------------
+
+xPlayer.removeInventoryItem
+
+xPlayer.Functions.RemoveItem
+
+-----------------------------------------------
+
+xPlayer.addInventoryItem
+
+xPlayer.Functions.AddItem
+
+-----------------------------------------------
+
+ESX.GetPlayerFromId(src)
+
+QBCore.Functions.GetPlayer(src)
+
+-----------------------------------------------
+
+ESX.Game.SpawnVehicle()
+ESX.Game.GetVehicleProperties()
+ESX.Game.GetClosestVehicle()
+
+QBCore.Functions.SpawnVehicle()
+QBCore.Functions.GetVehicleProperties()
+QBCore.Functions.GetClosestVehicle()
+
+-----------------------------------------------
+
+ESX.GetPlayerData()
+
+QBCore.Functions.GetPlayerData()
+
+-----------------------------------------------
+
+ESX.RegisterUsableItem()
+
+QBCore.Functions.CreateUseableItem()
+
+-----------------------------------------------
+
+ESX.RegisterServerCallback()
+
+QBCore.Functions.CreateCallback()
+
+-----------------------------------------------
+
+ESX.TriggerServerCallback()
+
+QBCore.Functions.TriggerCallback()
+
+-----------------------------------------------
+
+MySQL.Async.fetchScalar()
+MySQL.Async.fetchAll()
+
+exports['ghmattimysql']:scalar()
+exports['ghmattimysql']:execute()
+
+-----------------------------------------------
+
+RegisterCommand
+
+QBCore.Commands.Add()
+
+-----------------------------------------------
+
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+
+TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
